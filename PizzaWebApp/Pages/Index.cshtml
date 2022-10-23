@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To Pizza Store</h1>
+    <p>Here are following Pizzas Available</a>.</p>
+</div>
+
+@foreach (var pizza in Model.Pizza)
+{
+
+    <h4>@pizza.pizza_id: @pizza.name </h4>
+    <h5>price @pizza.price</h5>
+    <p>@pizza.desc</p>
+    <img class="img-thumbnail" width="200px" src="@pizza.image" />
+    <div style="margin-top:10px"></div>
+
+}

@@ -1,19 +1,24 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PizzaWebApp.Model;
 using PizzaWebApp.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace PizzaWebApp
 {
     public class Startup
     {
+        
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -52,6 +57,14 @@ namespace PizzaWebApp
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+
+                //--------Jugari Way to Get API
+                endpoints.MapGet("/PizzaRecord", (context) =>
+                {
+                   IEnumerable<Pizza> pizzaRecord = app.ApplicationServices.GetService<JsonFilePizzaService>().getPizzaRecord();
+                    string newPizzaRecord = JsonSerializer.Serialize<IEnumerable<Pizza>>(pizzaRecord);
+                    return context.Response.WriteAsync(newPizzaRecord);
+                });
             });
         }
     }

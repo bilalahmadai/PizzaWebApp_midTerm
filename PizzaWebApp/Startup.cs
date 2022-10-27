@@ -30,7 +30,8 @@ namespace PizzaWebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddTransient<JsonFilePizzaService>();
+            services.AddControllers(); //for controller
+            services.AddTransient<JsonFilePizzaService>(); //for Services
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,14 +58,16 @@ namespace PizzaWebApp
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                //---add this for controller
+                endpoints.MapControllers();
 
                 //--------Jugari Way to Get API
-                endpoints.MapGet("/PizzaRecord", (context) =>
-                {
-                   IEnumerable<Pizza> pizzaRecord = app.ApplicationServices.GetService<JsonFilePizzaService>().getPizzaRecord();
-                    string newPizzaRecord = JsonSerializer.Serialize<IEnumerable<Pizza>>(pizzaRecord);
-                    return context.Response.WriteAsync(newPizzaRecord);
-                });
+                // endpoints.MapGet("/PizzaRecord", (context) =>
+                //{
+                //   IEnumerable<Pizza> pizzaRecord = app.ApplicationServices.GetService<JsonFilePizzaService>().getPizzaRecord();
+                //   string newPizzaRecord = JsonSerializer.Serialize<IEnumerable<Pizza>>(pizzaRecord);
+                //    return context.Response.WriteAsync(newPizzaRecord);
+                // });
             });
         }
     }

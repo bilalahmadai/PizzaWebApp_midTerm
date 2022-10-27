@@ -1,0 +1,35 @@
+﻿@page
+@model PizzaWebApp.Pages.PizzaMenuModel
+@{
+    ViewData["Title"] = "Pizza Menu";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Menu</h1>
+    
+</div>
+
+<div class="row">
+    @foreach (var pizza in Model.Pizza)
+    {
+        <div class=" col-lg-3 col-md-4 col-sm">
+
+
+
+            <article class="card">
+                <img class="card__image  img-fluid" src="@pizza.image" alt="@pizza.image" />
+                <div class="card__data">
+                    <div class="card__info">
+                        <h2>@pizza.name</h2>
+                        <p>@pizza.desc</p>
+                        <h3 class="card__price">@pizza.price $</h3>
+                    </div>
+
+                    <input class="card__qty" type="number" name="qty" placeholder="0" value="" />
+                    <button class="card__add">+</button>
+                </div>
+            </article>
+        </div>
+
+    }
+</div>

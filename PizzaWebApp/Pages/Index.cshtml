@@ -9,13 +9,30 @@
     <p>Here are following Pizzas Available</a>.</p>
 </div>
 
-@foreach (var pizza in Model.Pizza)
-{
 
-    <h4>@pizza.pizza_id: @pizza.name </h4>
-    <h5>price @pizza.price</h5>
-    <p>@pizza.desc</p>
-    <img class="img-thumbnail" width="200px" src="@pizza.image" />
-    <div style="margin-top:10px"></div>
+<div class="row">
+    @foreach (var pizza in Model.Pizza)
+{
+        <div class=" col-lg-3 col-md-4 col-sm">
+          
+
+
+            <article class="card">
+                <img class="card__image cropped-image cover-image" src="@pizza.image" />
+                <div class="card__data">
+                    <div class="card__info">
+                        <h2>@pizza.name</h2>
+                        <p>@pizza.desc</p>
+                            <h3 class="card__price">@pizza.price $</h3>
+                    </div>
+                    
+                    <input class="card__qty" type="number" name="qty" placeholder="0" value="" />
+                    <button class="card__add">+</button>
+                </div>
+            </article>
+    </div>
 
 }
+</div>
+
+

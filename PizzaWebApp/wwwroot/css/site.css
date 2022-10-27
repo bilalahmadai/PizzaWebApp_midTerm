@@ -86,14 +86,7 @@ body {
     border:none;
     
 }
-.cropped-image {
-    width: 200px;
-    height: 200px;
-    border: solid 5px #efac48;
-}
-.cover-image {
-    object-fit:none;
-}
+
 
 .card__image {
     border-radius:100%;
@@ -113,7 +106,7 @@ body {
    border-radius:15px;
     
     background-color: #ededed;
-    padding-top: 90%;
+    padding-top: 100%;
     transition: all 0.3s ease-out 0.1s;
 }
 
@@ -140,7 +133,7 @@ body {
 
 .card__price {
     height: 30px;
-    padding: 0 10px 10px 20px;
+    padding-bottom:20px;
     font-size: 16px;
     display: flex;
     align-items: center;

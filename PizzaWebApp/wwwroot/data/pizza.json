@@ -4,41 +4,41 @@
     "name": "All In One",
     "price": "COMMING SOON",
     "desc": "Tikka , fajita , italian , pepproni , cheese",
-    "image": "https://www.pizza363.com/upload/1603374193-Beef-Meat-Lover.jpg"
+    "image": "https://good-pizza-great-pizza.bookie0.repl.co/Images/Pizzas/fruity.webp"
   },
   {
     "id": 2,
     "name": "Hot N Spicy",
     "price": "COMMING SOON",
     "desc": "Beef, Tomato, Jalapeno, Cheese and Pizza Sauce",
-    "image": "https://www.pizza363.com/upload/1603374196-Angrycious-Hot-n-Spicy.jpg"
+    "image": "https://good-pizza-great-pizza.bookie0.repl.co/Images/Pizzas/salty.webp"
   },
   {
     "id": 3,
     "name": "Afghani Tikka",
     "price": "COMMING SOON",
     "desc": "Afghani chicken, onion, jalapeno and mushroom",
-    "image": "https://www.pizza363.com/upload/1603374204-The-Boss-Afghani-Tikka-Pizza.jpg"
+    "image": "https://good-pizza-great-pizza.bookie0.repl.co/Images/Pizzas/supreme.webp"
   },
   {
     "id": 4,
     "name": "Pepperoni",
     "price": "COMMING SOON",
     "desc": "Sumptuous Pepperoni cheese and tomato sauce",
-    "image": "https://www.pizza363.com/upload/1603374207-1000-Ocean-Pepperoni-Pizza.jpg"
+    "image": "https://good-pizza-great-pizza.bookie0.repl.co/Images/Pizzas/pepperoni.webp"
   },
   {
     "id": 5,
     "name": "Malai Boti",
     "price": "COMMING SOON",
     "desc": "Chicken Malai Boti, onion, green pepper, mushroom and jalapeno",
-    "image": "https://www.pizza363.com/upload/1603374211-King-Chicken-Malai-Boti.jpg"
+    "image": "https://good-pizza-great-pizza.bookie0.repl.co/Images/Pizzas/meat.webp"
   },
   {
     "id": 6,
     "name": "Creamy Tikka",
     "price": "COMMING SOON",
     "desc": "Creamy Mayo Sauce, Chicken tikka, onion and cheese",
-    "image": "https://www.pizza363.com/upload/1603374215-Twista-Creamy-Tikka.jpg"
+    "image": "https://good-pizza-great-pizza.bookie0.repl.co/Images/Pizzas/cheese.webp"
   }
 ]

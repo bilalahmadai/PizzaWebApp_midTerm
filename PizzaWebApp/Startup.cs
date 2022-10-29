@@ -32,6 +32,7 @@ namespace PizzaWebApp
             services.AddRazorPages();
             services.AddControllers(); //for controller
             services.AddTransient<JsonFilePizzaService>(); //for Services
+            services.AddTransient<StyleSheetService>();//for StyleSheet Service
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
